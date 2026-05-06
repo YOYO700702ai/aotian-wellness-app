@@ -142,6 +142,7 @@ function renderStats() {
 
   el("points").textContent = state.points;
   el("steps").textContent = state.steps;
+  el("stepsInput").value = state.steps || "";
   el("waterCount").textContent = `${state.water} / 3`;
   el("foodCount").textContent = `${foodDone} / 4`;
   el("healthScore").textContent = score;
@@ -336,6 +337,19 @@ document.querySelectorAll(".tab").forEach((tab) => {
 
 el("walkBtn").addEventListener("click", () => {
   state.steps = Math.min(12000, state.steps + 800);
+  save();
+  render();
+});
+
+el("stepsForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const raw = el("stepsInput").value.trim();
+  const nextSteps = raw === "" ? 0 : Number(raw);
+  if (!Number.isFinite(nextSteps)) {
+    alert("請輸入有效的步數。");
+    return;
+  }
+  state.steps = Math.round(clamp(nextSteps, 0, 100000));
   save();
   render();
 });

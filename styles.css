@@ -302,6 +302,76 @@ h1 {
   margin-top: 14px;
 }
 
+.manual-sync {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #f3faf7);
+}
+
+.manual-sync h2 {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.manual-sync p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.steps-form {
+  display: grid;
+  gap: 8px;
+}
+
+.steps-form label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.steps-form div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.steps-form input,
+.steps-form button {
+  min-height: 44px;
+  border-radius: 14px;
+  font: inherit;
+}
+
+.steps-form input {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0 12px;
+  font-weight: 800;
+}
+
+.steps-form input:focus {
+  outline: 2px solid rgba(53, 193, 139, 0.28);
+  outline-offset: 2px;
+}
+
+.steps-form button {
+  border: 0;
+  padding: 0 15px;
+  background: linear-gradient(135deg, #102f4b, #0f8b7f);
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+
 .action-btn {
   min-height: 72px;
   border-radius: 18px;
@@ -693,6 +763,10 @@ body.modal-open {
 
   .quick-actions {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-form div {
+    grid-template-columns: 1fr;
   }
 
   .card-frame img {

@@ -85,6 +85,21 @@
             </article>
           </section>
 
+          <section class="manual-sync" aria-label="手動同步步數">
+            <div>
+              <p class="eyebrow">MANUAL SYNC</p>
+              <h2>輸入今日步數</h2>
+              <p>從手機健康 App 看今天步數後填入，任務會自動判定。</p>
+            </div>
+            <form id="stepsForm" class="steps-form">
+              <label for="stepsInput">今日步數</label>
+              <div>
+                <input id="stepsInput" type="number" inputmode="numeric" min="0" max="100000" step="1" placeholder="例如 7342" />
+                <button type="submit">更新</button>
+              </div>
+            </form>
+          </section>
+
           <section class="quick-actions" aria-label="快速紀錄">
             <button class="action-btn" id="walkBtn">
               <span>＋800</span>
