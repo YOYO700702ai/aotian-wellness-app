@@ -1,19 +1,19 @@
 :root {
-  color-scheme: light;
-  --bg: #f5f7f5;
-  --surface: #ffffff;
-  --surface-2: #f0f5f2;
-  --ink: #15231f;
-  --muted: #6a7772;
-  --line: rgba(20, 45, 38, 0.11);
-  --mint: #35c18b;
-  --mint-2: #e0f8ee;
-  --teal: #0f8b7f;
-  --amber: #f0b64b;
-  --coral: #ed6f63;
-  --violet: #7a6fe8;
-  --navy: #19324e;
-  --shadow: 0 24px 70px rgba(18, 39, 34, 0.16);
+  color-scheme: dark;
+  --bg: #11100f;
+  --surface: #1b1816;
+  --surface-2: #251f1a;
+  --ink: #fff4df;
+  --muted: #b8aa91;
+  --line: rgba(235, 196, 111, 0.22);
+  --mint: #38c694;
+  --mint-2: rgba(56, 198, 148, 0.16);
+  --teal: #0e8d78;
+  --amber: #e7bf66;
+  --coral: #b94450;
+  --violet: #8c7ae6;
+  --navy: #151d2b;
+  --shadow: 0 34px 90px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -24,10 +24,10 @@ body {
   margin: 0;
   min-height: 100vh;
   background:
-    radial-gradient(circle at 13% 6%, rgba(53, 193, 139, 0.2), transparent 25rem),
-    radial-gradient(circle at 88% 12%, rgba(237, 111, 99, 0.16), transparent 24rem),
-    radial-gradient(circle at 50% 100%, rgba(122, 111, 232, 0.11), transparent 28rem),
-    linear-gradient(145deg, #f4f8f5, #fbf7f1 58%, #f1f6f8);
+    radial-gradient(circle at 12% 6%, rgba(185, 68, 80, 0.32), transparent 24rem),
+    radial-gradient(circle at 86% 8%, rgba(231, 191, 102, 0.26), transparent 22rem),
+    radial-gradient(circle at 52% 100%, rgba(14, 141, 120, 0.18), transparent 28rem),
+    linear-gradient(145deg, #090808, #1d1514 52%, #0f1616);
   color: var(--ink);
   font-family: "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
 }
@@ -47,8 +47,8 @@ button {
   width: min(430px, 100%);
   min-height: min(880px, calc(100vh - 48px));
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.78);
+  background: rgba(19, 17, 15, 0.95);
+  border: 1px solid rgba(231, 191, 102, 0.32);
   border-radius: 32px;
   box-shadow: var(--shadow);
   padding: 18px;
@@ -63,7 +63,7 @@ button {
 
 .eyebrow {
   margin: 0 0 4px;
-  color: var(--teal);
+  color: var(--amber);
   font-size: 11px;
   letter-spacing: 0;
   font-weight: 800;
@@ -87,13 +87,13 @@ h1 {
   border-radius: 16px;
   padding: 8px 10px;
   text-align: right;
-  background: linear-gradient(145deg, #182f4b, #0e514d);
+  background: linear-gradient(145deg, #332219, #171314);
   color: white;
 }
 
 .points span {
   display: block;
-  color: #ffe1a1;
+  color: #ffe4a3;
   font-size: 22px;
   font-weight: 900;
 }
@@ -109,7 +109,7 @@ h1 {
   margin: 18px 0;
   padding: 5px;
   border-radius: 16px;
-  background: #ecf2ef;
+  background: rgba(255, 244, 223, 0.08);
 }
 
 .tab,
@@ -130,9 +130,9 @@ h1 {
 }
 
 .tab.active {
-  background: var(--surface);
-  color: #0e6f66;
-  box-shadow: 0 8px 22px rgba(20, 74, 62, 0.13);
+  background: linear-gradient(135deg, #f3d68a, #c79539);
+  color: #25170f;
+  box-shadow: 0 10px 26px rgba(231, 191, 102, 0.22);
 }
 
 .view {
@@ -152,8 +152,8 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 22px;
   background:
-    radial-gradient(circle at 92% 18%, rgba(240, 182, 75, 0.22), transparent 8rem),
-    linear-gradient(135deg, #173654, #113a35 58%, #0f6e5f);
+    radial-gradient(circle at 88% 14%, rgba(231, 191, 102, 0.24), transparent 9rem),
+    linear-gradient(135deg, #151a27, #251615 54%, #0c4f46);
   color: white;
 }
 
@@ -161,7 +161,7 @@ h1 {
   min-height: 170px;
   border-radius: 16px;
   overflow: hidden;
-  background: #111d1a;
+  background: #080706;
 }
 
 .coach-portrait img {
@@ -177,7 +177,7 @@ h1 {
 }
 
 .rank {
-  color: #ffe1a1;
+  color: #ffe4a3;
   font-weight: 900;
   margin-bottom: 4px;
 }
@@ -200,7 +200,7 @@ h1 {
 .draw-stage,
 .album-card {
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: linear-gradient(180deg, rgba(255, 244, 223, 0.055), rgba(29, 24, 20, 0.98));
 }
 
 .score-card {
@@ -222,7 +222,7 @@ h1 {
   border-radius: 50%;
   background:
     radial-gradient(circle at center, var(--surface) 58%, transparent 59%),
-    conic-gradient(var(--mint) var(--score), #e8eeeb 0);
+    conic-gradient(var(--amber) var(--score), rgba(255, 244, 223, 0.12) 0);
 }
 
 .score-ring span {
@@ -277,7 +277,7 @@ h1 {
   height: 8px;
   margin-top: 12px;
   border-radius: 999px;
-  background: #e7eeea;
+  background: rgba(255, 244, 223, 0.12);
   overflow: hidden;
 }
 
@@ -286,7 +286,7 @@ h1 {
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #0f8b7f, #35c18b);
+  background: linear-gradient(90deg, var(--coral), var(--amber));
   transition: width 260ms ease;
 }
 
@@ -310,7 +310,7 @@ h1 {
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: linear-gradient(135deg, #ffffff, #f3faf7);
+  background: linear-gradient(135deg, rgba(255, 244, 223, 0.07), rgba(35, 27, 22, 0.94));
 }
 
 .manual-sync h2 {
@@ -352,22 +352,22 @@ h1 {
   width: 100%;
   min-width: 0;
   border: 1px solid var(--line);
-  background: var(--surface);
+  background: rgba(8, 7, 6, 0.55);
   color: var(--ink);
   padding: 0 12px;
   font-weight: 800;
 }
 
 .steps-form input:focus {
-  outline: 2px solid rgba(53, 193, 139, 0.28);
+  outline: 2px solid rgba(231, 191, 102, 0.34);
   outline-offset: 2px;
 }
 
 .steps-form button {
   border: 0;
   padding: 0 15px;
-  background: linear-gradient(135deg, #102f4b, #0f8b7f);
-  color: white;
+  background: linear-gradient(135deg, #f3d68a, #c79539);
+  color: #25170f;
   font-weight: 900;
   cursor: pointer;
 }
@@ -375,7 +375,7 @@ h1 {
 .action-btn {
   min-height: 72px;
   border-radius: 18px;
-  background: linear-gradient(180deg, #ffffff, #f0f6f3);
+  background: linear-gradient(180deg, rgba(255, 244, 223, 0.08), rgba(37, 31, 26, 0.96));
   color: var(--ink);
   border: 1px solid var(--line);
 }
@@ -424,7 +424,7 @@ h1 {
   padding: 3px 8px;
   border-radius: 999px;
   background: var(--mint-2);
-  color: var(--teal);
+  color: #88e7c4;
   font-size: 11px;
   font-weight: 900;
 }
@@ -445,14 +445,14 @@ h1 {
   min-height: 44px;
   border-radius: 14px;
   padding: 0 16px;
-  background: linear-gradient(135deg, #102f4b, #0f8b7f);
-  color: white;
+  background: linear-gradient(135deg, #f3d68a, #c79539);
+  color: #25170f;
   font-weight: 900;
 }
 
 .next-task button:disabled {
   background: var(--mint-2);
-  color: var(--teal);
+  color: #88e7c4;
 }
 
 .task-list {
@@ -477,7 +477,7 @@ h1 {
   place-items: center;
   border-radius: 14px;
   background: var(--mint-2);
-  color: var(--teal);
+  color: #88e7c4;
   font-weight: 900;
 }
 
@@ -490,20 +490,20 @@ h1 {
   min-width: 68px;
   min-height: 38px;
   border-radius: 12px;
-  background: #edf4f1;
-  color: var(--navy);
+  background: rgba(255, 244, 223, 0.08);
+  color: var(--ink);
   border: 1px solid var(--line);
   font-weight: 800;
 }
 
 .task.done {
-  border-color: rgba(53, 193, 139, 0.45);
-  background: #f3fcf7;
+  border-color: rgba(56, 198, 148, 0.42);
+  background: rgba(56, 198, 148, 0.08);
 }
 
 .task.done button {
   background: var(--mint-2);
-  color: var(--teal);
+  color: #88e7c4;
 }
 
 .draw-stage {
@@ -514,7 +514,7 @@ h1 {
 .card-frame {
   position: relative;
   overflow: hidden;
-  background: #111d1a;
+  background: #080706;
 }
 
 .card-frame img {
@@ -522,7 +522,7 @@ h1 {
   height: 470px;
   object-fit: contain;
   object-position: center top;
-  background: #111d1a;
+  background: #080706;
   display: block;
 }
 
@@ -607,8 +607,8 @@ h1 {
   margin-bottom: 14px;
   padding: 14px;
   border-radius: 18px;
-  border: 1px solid rgba(53, 193, 139, 0.38);
-  background: linear-gradient(135deg, #f2fbf7, #fff7ed);
+  border: 1px solid rgba(231, 191, 102, 0.32);
+  background: linear-gradient(135deg, rgba(231, 191, 102, 0.1), rgba(35, 27, 22, 0.96));
 }
 
 .first-run-banner h3 {
@@ -623,7 +623,7 @@ h1 {
 }
 
 .first-run-banner span[data-first-rarity] {
-  color: var(--teal);
+  color: var(--amber);
   font-weight: 900;
 }
 
@@ -665,7 +665,7 @@ h1 {
 .modal-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(12, 24, 22, 0.58);
+  background: rgba(4, 4, 4, 0.68);
   backdrop-filter: blur(2px);
 }
 
@@ -681,7 +681,7 @@ h1 {
 }
 
 .modal-image {
-  background: #111d1a;
+  background: #080706;
 }
 
 .modal-image img {
