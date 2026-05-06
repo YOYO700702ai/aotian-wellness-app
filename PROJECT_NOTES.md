@@ -4,6 +4,8 @@
 
 已完成一版純前端手機版網頁 prototype，主題是「霸道總裁陪使用者做健康飲控與走路任務，完成任務拿點數抽總裁卡」。
 
+目前也已加入 PWA 測試版設定，可先用手機瀏覽器加入主畫面，當成個人測試 App 使用。
+
 ## 執行方式
 
 進入本資料夾後執行：
@@ -19,6 +21,13 @@ http://127.0.0.1:5173/index.html
 ```
 
 直接用 `file:///` 開可能不穩，建議走本機 server。
+
+## 手機測試方式
+
+- 若已部署到 HTTPS 網址，可用手機瀏覽器開啟網址後加入主畫面。
+- Android Chrome：選單 → 加入主畫面 / 安裝應用程式。
+- iPhone Safari：分享 → 加入主畫面。
+- PWA 版本不會可靠讀取手機系統步數；目前步數仍是手動測試，之後若要自動讀步數需改做原生 App 並接 HealthKit / Health Connect。
 
 ## 已完成功能
 
@@ -56,6 +65,10 @@ http://127.0.0.1:5173/index.html
 - 視覺修正
   - 卡片顯示用 `object-fit: contain`，不再裁切上方稀有度與金框
   - Modal 樣式與既有視覺一致，僅新增必要 CSS
+- PWA 測試版
+  - 加入 `manifest.webmanifest`，設定 App 名稱、啟動畫面、主題色與圖示
+  - 加入 `service-worker.js`，快取 App shell，支援基本離線載入
+  - 加入 `assets/app-icon.svg` 與 `assets/icons/` 作為 App 圖示
 
 ## 相關檔案
 
@@ -76,6 +89,14 @@ http://127.0.0.1:5173/index.html
 - `assets/cards/`
   - 31 張卡片素材，從桌面 `C:\Users\USER\Desktop\傲天卡` 複製進來
   - 原桌面素材沒有被修改
+- `manifest.webmanifest`
+  - PWA 安裝設定
+- `service-worker.js`
+  - PWA 快取策略
+- `assets/app-icon.svg`
+  - App 主圖示
+- `assets/icons/`
+  - PWA 192 / 512 PNG 圖示
 
 ## 已踩到的點
 
@@ -83,10 +104,12 @@ http://127.0.0.1:5173/index.html
 - 使用者要的是 Windows 實際本地瀏覽器，不是 Codex in-app browser。
 - 初版卡圖用 `object-fit: cover` 會把卡片上方裁掉，已改成 `contain`。
 - 目前是 prototype，步數還沒有接 iOS / Android / Apple Health / Google Fit。
+- PWA 可以加入主畫面，但不能穩定讀取手機系統步數；真步數需要原生 App 權限。
 
 ## 下一步建議
 
 - 把首頁總裁卡面改成可切換「今日值班總裁卡」。
 - 補卡片解鎖條件、抽到日期等 metadata。
 - 把連續達標天數從寫死的 3 改成真正紀錄。
+- 部署到 GitHub Pages / Vercel，方便手機用 HTTPS 網址加入主畫面。
 - 若要做成真正手機 App，下一階段可改成 React Native / Expo，並接 HealthKit / Google Fit 或手機步數 API。

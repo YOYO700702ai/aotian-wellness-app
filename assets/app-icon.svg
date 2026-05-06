@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">傲天健康監督</title>
+  <desc id="desc">墨綠底色、金色皇冠與健康心跳符號的 App 圖示。</desc>
+  <defs>
+    <linearGradient id="bg" x1="80" y1="48" x2="438" y2="472" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173654"/>
+      <stop offset="0.56" stop-color="#0f6e5f"/>
+      <stop offset="1" stop-color="#35c18b"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="140" y1="120" x2="370" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffe7a8"/>
+      <stop offset="1" stop-color="#f0b64b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <path d="M126 205l46-74 58 62 76-88 53 88 49-58 24 164H104l22-94z" fill="url(#shine)"/>
+  <path d="M126 205l46-74 58 62 76-88 53 88 49-58 24 164H104l22-94z" fill="none" stroke="#fff4c7" stroke-width="10" stroke-linejoin="round" opacity=".45"/>
+  <path d="M132 338h64l35-58 50 92 44-74h58" fill="none" stroke="#ffffff" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="256" cy="414" r="28" fill="#ffe1a1"/>
+</svg>
