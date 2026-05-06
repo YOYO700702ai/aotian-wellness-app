@@ -24,6 +24,18 @@ http://127.0.0.1:5173/index.html
 
 目前步數仍是手動測試資料，尚未接 HealthKit / Health Connect。
 
+## GitHub Pages 部署
+
+已加入 `.github/workflows/pages.yml`，推到 `main` 後會用 GitHub Actions 部署靜態頁。
+
+部署成功後網址會是：
+
+```text
+https://yoyo700702ai.github.io/aotian-wellness-app/
+```
+
+如果第一次部署沒有自動開始，請到 GitHub repo 的 Settings → Pages，將 Source 設為 GitHub Actions。
+
 ## 目前功能
 
 - 今日健康儀表板：步數、飲水、飲控、今日執行率

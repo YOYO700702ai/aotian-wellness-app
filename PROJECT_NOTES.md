@@ -25,6 +25,7 @@ http://127.0.0.1:5173/index.html
 ## 手機測試方式
 
 - 若已部署到 HTTPS 網址，可用手機瀏覽器開啟網址後加入主畫面。
+- GitHub Pages 預期網址：`https://yoyo700702ai.github.io/aotian-wellness-app/`
 - Android Chrome：選單 → 加入主畫面 / 安裝應用程式。
 - iPhone Safari：分享 → 加入主畫面。
 - PWA 版本不會可靠讀取手機系統步數；目前步數仍是手動測試，之後若要自動讀步數需改做原生 App 並接 HealthKit / Health Connect。
@@ -97,6 +98,10 @@ http://127.0.0.1:5173/index.html
   - App 主圖示
 - `assets/icons/`
   - PWA 192 / 512 PNG 圖示
+- `.github/workflows/pages.yml`
+  - GitHub Pages 靜態站部署 workflow
+- `.nojekyll`
+  - 關閉 Jekyll 處理，讓靜態檔案原樣發布
 
 ## 已踩到的點
 
@@ -111,5 +116,5 @@ http://127.0.0.1:5173/index.html
 - 把首頁總裁卡面改成可切換「今日值班總裁卡」。
 - 補卡片解鎖條件、抽到日期等 metadata。
 - 把連續達標天數從寫死的 3 改成真正紀錄。
-- 部署到 GitHub Pages / Vercel，方便手機用 HTTPS 網址加入主畫面。
+- 若 GitHub Pages 第一次沒有自動部署，到 repo Settings → Pages，把 Source 設為 GitHub Actions。
 - 若要做成真正手機 App，下一階段可改成 React Native / Expo，並接 HealthKit / Google Fit 或手機步數 API。
